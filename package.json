@@ -1,0 +1,19 @@
+{
+  "name": "mineserver.js",
+  "version": "0.0.1",
+  "description": "Node.js minecraft server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mineserver/mineserver.js.git"
+  },
+  "keywords": [
+    "minecraft",
+    "server"
+  ],
+  "author": "The Mineserver Project (http://www.mineserver.be/)",
+  "license": "BSD",
+  "dependencies": {
+
+  }
+}
