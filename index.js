@@ -25,9 +25,12 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-var config = { port: 12345 };
+var config = {
+  port: 12345,
+  serverName: "Mineserver"
+};
 
 var Mineserver = require("./lib/mineserver");
 
-var server = new Mineserver(config);
-server.init();
+global.server = new Mineserver(config);
+global.server.init();
