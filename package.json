@@ -14,6 +14,6 @@
   "author": "The Mineserver Project (http://www.mineserver.be/)",
   "license": "BSD",
   "dependencies": {
-
+    "BigInt": "~5.4.5"
   }
 }
