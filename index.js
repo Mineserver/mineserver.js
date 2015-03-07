@@ -27,7 +27,8 @@
 
 var config = {
   port: 12345,
-  serverName: "Mineserver"
+  serverName: "Mineserver",
+  MOTD: "Welcome to §9Mineserver§r test server, have §kfun§r!"
 };
 
 var Mineserver = require("./lib/mineserver");
