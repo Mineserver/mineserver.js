@@ -32,6 +32,8 @@ var config = {
 };
 
 var Mineserver = require("./lib/mineserver");
+var Packetizer = require("./lib/packetizer");
 
+global.packet = new Packetizer();
 global.server = new Mineserver(config);
 global.server.init();
