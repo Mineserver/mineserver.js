@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Node.js minecraft server",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/mineserver/mineserver.js.git"
