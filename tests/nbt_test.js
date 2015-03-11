@@ -34,12 +34,12 @@ fs.readFile('hello_world.nbt', function (err, data) {
   var nbt_read = new NBT();
   var nbt_read_2 = new NBT();
   var nbt_write = new NBT();
-  nbt_read.read(data);
+  nbt_read.read(data, 0);
   console.warn(util.inspect(nbt_read.toplevel), showHidden=false, depth=2, colorize=true);
   nbt_write.write(nbt_read.toplevel);
   console.warn(util.inspect(nbt_write), showHidden=false, depth=2, colorize=true);
 
-  nbt_read_2.read(nbt_write.dataBuffer);
+  nbt_read_2.read(nbt_write.dataBuffer, 0);
   console.warn(util.inspect(nbt_read_2.toplevel), showHidden=false, depth=2, colorize=true);
   var outbuf = new Buffer(nbt_write.bufferPos-1);
   nbt_write.dataBuffer.copy(outbuf, 0, 0, nbt_write.bufferPos-1);
