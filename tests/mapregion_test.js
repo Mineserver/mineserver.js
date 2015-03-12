@@ -27,9 +27,20 @@
 
 var util = require('util');
 var Region = require("../lib/mapregion");
+var NBT = require("../lib/nbt");
 
 var mapregion = new Region();
 
 mapregion.openFile("map",-1, 0, function() {
-  console.warn(util.inspect(mapregion), showHidden=false, depth=2, colorize=true);
+  //console.warn(util.inspect(mapregion), showHidden=false, depth=2, colorize=true);
+
+  mapregion.readChunk(4, 0, function(success, data) {
+    if(success) {
+      var nbt_read = new NBT();
+      nbt_read.read(data, 0);
+      nbt_read.debug(nbt_read.toplevel);
+    }
+    else console.log("Failure");
+
+  });
 });
