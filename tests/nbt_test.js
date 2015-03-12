@@ -35,6 +35,7 @@ fs.readFile('hello_world.nbt', function (err, data) {
   var nbt_read_2 = new NBT();
   var nbt_write = new NBT();
   nbt_read.read(data, 0);
+  nbt_read.debug(nbt_read.toplevel);
   console.warn(util.inspect(nbt_read.toplevel), showHidden=false, depth=2, colorize=true);
   nbt_write.write(nbt_read.toplevel);
   console.warn(util.inspect(nbt_write), showHidden=false, depth=2, colorize=true);
