@@ -25,14 +25,11 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-var config = {
-  port: 12345,
-  serverName: "Mineserver",
-  MOTD: "Welcome to §9Mineserver§r test server, have §kfun§r!"
-};
-
+var fs = require("fs");
 var Mineserver = require("./lib/mineserver");
 var Packetizer = require("./lib/packetizer");
+
+var config = JSON.parse( fs.readFileSync( "./config.json", "utf8" ));
 
 global.packet = new Packetizer();
 global.server = new Mineserver(config);

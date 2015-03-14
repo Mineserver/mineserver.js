@@ -16,7 +16,8 @@ Assuming you have git and Node.js installed:
  * Get the source from the git `git clone https://github.com/Mineserver/mineserver.js.git`
  * Go to mineserver.js directory
  * Run `npm install` to get npm modules
- * Edit index.js for port etc. customization
+ * Copy config.sample.json to config.json
+ * Edit config.json for port etc. customization
  * Run server with `node index.js`
  
 ### Supported Minecraft version
