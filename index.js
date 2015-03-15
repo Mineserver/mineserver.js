@@ -34,3 +34,10 @@ var config = JSON.parse( fs.readFileSync( "./config.json", "utf8" ));
 global.packet = new Packetizer();
 global.server = new Mineserver(config);
 global.server.init();
+
+process.on('SIGINT', function() {
+  console.log("Caught interrupt signal");
+  global.server.map.saveAll(function() {
+    process.exit();
+  });
+});
