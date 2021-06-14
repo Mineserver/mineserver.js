@@ -3,7 +3,7 @@ Mineserver.js
 
 Mineserver in Node.js
 
-You can find the core team from #mineserver @ irc.freenode.net
+You can find the core team from [#mineserver](https://web.libera.chat/#mineserver) in [Libera.Chat](https://libera.chat/) IRC network.
 
     Copyright (c) 2014-2015, The Mineserver Project
     
